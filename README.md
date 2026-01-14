@@ -1,98 +1,218 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🔐 Taller JWT - Autenticación en NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)](https://jwt.io/)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📋 Descripción
 
-## Description
+Este proyecto implementa un sistema completo de autenticación JWT (JSON Web Tokens) en NestJS. Incluye registro de usuarios con contraseñas hasheadas, login que genera tokens JWT, protección de rutas usando Guards, y acceso a la información del usuario autenticado.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+**Repositorio:** [GitHub - Taller JWT Nest JoseZumarraga](https://github.com/JoseDanielZ/Taller-JWT-Nest-JoseZumarraga-Postman)
 
-## Project setup
+## 🚀 Características
 
-```bash
-$ npm install
-```
+- ✅ **Registro de usuarios** con validación de datos
+- ✅ **Login con JWT** - Generación de tokens de acceso
+- ✅ **Protección de rutas** usando Guards de autenticación
+- ✅ **Hashing de contraseñas** con bcrypt
+- ✅ **Validación de DTOs** con class-validator
+- ✅ **Módulos separados** para auth y users
+- ✅ **Base de datos en memoria** (array) para simplicidad
+- ✅ **Documentación completa** del código
 
-## Compile and run the project
+## 🛠️ Tecnologías Utilizadas
 
-```bash
-# development
-$ npm run start
+- **Framework:** [NestJS](https://nestjs.com/) - Framework Node.js progresivo
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+- **Autenticación:** [Passport.js](http://www.passportjs.org/) con estrategia JWT
+- **JWT:** [@nestjs/jwt](https://docs.nestjs.com/security/authentication#jwt-functionality)
+- **Hashing:** [bcrypt](https://www.npmjs.com/package/bcrypt) con [@types/bcrypt](https://www.npmjs.com/package/@types/bcrypt)
+- **Validación:** [class-validator](https://github.com/typestack/class-validator) y [class-transformer](https://github.com/typestack/class-transformer)
+- **Testing:** [Jest](https://jestjs.io/) para tests unitarios y e2e
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
+## 📦 Instalación
 
 ```bash
-# unit tests
-$ npm run test
+# Clonar el repositorio
+git clone https://github.com/JoseDanielZ/Taller-JWT-Nest-JoseZumarraga-Postman.git
+cd auth-practicajd
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Instalar dependencias
+npm install
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## ▶️ Ejecución
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+# Modo desarrollo (con hot reload)
+npm run start:dev
+
+# Modo producción
+npm run start:prod
+
+# Build del proyecto
+npm run build
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+El servidor se ejecutará en: `http://localhost:8282`
 
-## Resources
+## 📚 API Endpoints
 
-Check out a few resources that may come in handy when working with NestJS:
+### 🔓 Endpoints Públicos
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+#### Registro de Usuario
+```http
+POST /auth/register
+Content-Type: application/json
 
-## Support
+{
+  "nombre": "Juan Pérez",
+  "email": "juan@example.com",
+  "password": "password123"
+}
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+#### Login
+```http
+POST /auth/login
+Content-Type: application/json
 
-## Stay in touch
+{
+  "email": "juan@example.com",
+  "password": "password123"
+}
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### 🔒 Endpoints Protegidos (Requieren JWT Token)
 
-## License
+#### Obtener Perfil del Usuario
+```http
+GET /auth/profile
+Authorization: Bearer <JWT_TOKEN>
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+#### Ruta Protegida de Ejemplo
+```http
+GET /auth/protected
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### CRUD de Usuarios
+```http
+GET /users          # Listar todos los usuarios
+POST /users         # Crear usuario
+GET /users/:id      # Obtener usuario por ID
+PATCH /users/:id    # Actualizar usuario
+DELETE /users/:id   # Eliminar usuario
+```
+
+## 🧪 Testing con Postman
+
+### 1. Importar Colección
+- Descarga e importa la colección de Postman desde el repositorio
+- O crea los requests manualmente apuntando a `http://localhost:8282`
+
+### 2. Flujo de Testing
+
+1. **Registro**: `POST /auth/register` - Crear un nuevo usuario
+2. **Login**: `POST /auth/login` - Obtener token JWT
+3. **Copiar Token**: Del response del login, copiar el `access_token`
+4. **Configurar Auth**: En los requests protegidos, agregar header:
+   ```
+   Authorization: Bearer <TOKEN_AQUI>
+   ```
+5. **Probar Endpoints**: `/auth/profile`, `/auth/protected`, `/users/*`
+
+### 3. Variables de Entorno
+- `JWT_SECRET`: Secreto para firmar tokens (default: "mi_clave_secreta")
+- `PORT`: Puerto del servidor (default: 8282)
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app.controller.ts          # Controller principal (Hello World)
+├── app.module.ts              # Módulo raíz de la aplicación
+├── app.service.ts             # Servicio principal
+├── main.ts                    # Punto de entrada de la aplicación
+├── auth/                      # Módulo de autenticación
+│   ├── auth.controller.ts     # Endpoints de auth
+│   ├── auth.module.ts         # Configuración del módulo auth
+│   ├── auth.service.ts        # Lógica de autenticación
+│   ├── dto/                   # Data Transfer Objects
+│   │   ├── login.dto.ts       # DTO para login
+│   │   └── register.dto.ts    # DTO para registro
+│   ├── guards/                # Guards de protección
+│   │   └── jwt-auth.guard.ts  # Guard JWT
+│   └── strategies/            # Estrategias de Passport
+│       └── jwt.strategy.ts    # Estrategia JWT
+└── users/                     # Módulo de usuarios
+    ├── entities/              # Entidades
+    │   └── user.entity.ts     # Entidad User
+    ├── users.controller.ts    # CRUD de usuarios
+    ├── users.module.ts        # Configuración del módulo users
+    └── users.service.ts       # Servicio de usuarios
+```
+
+## 🔧 Configuración
+
+### Variables de Entorno (.env)
+```env
+JWT_SECRET=mi_clave_secreta
+JWT_EXPIRES_IN=24h
+PORT=8282
+```
+
+### JWT Configuration
+- **Secret**: `mi_clave_secreta`
+- **Expires In**: 24 horas
+- **Algorithm**: HS256
+
+## 📋 Requisitos del Taller
+
+✅ **Registro de usuarios** con contraseñas hasheadas  
+✅ **Sistema de login** que genera tokens JWT  
+✅ **Protección de rutas** usando Guards  
+✅ **Acceso a información** del usuario autenticado  
+✅ **Validación de datos** con DTOs  
+✅ **Separación modular** (auth/users)  
+✅ **Documentación** completa del código  
+
+## 🧪 Tests
+
+```bash
+# Tests unitarios
+npm run test
+
+# Tests e2e
+npm run test:e2e
+
+# Cobertura de tests
+npm run test:cov
+```
+
+## 🤝 Contribución
+
+1. Fork el proyecto
+2. Crea tu rama de feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 👨‍💻 Autor
+
+**José Daniel Zumárraga**  
+- GitHub: [@JoseDanielZ](https://github.com/JoseDanielZ)
+- LinkedIn: [José Daniel Zumárraga](https://linkedin.com/in/josedanielzumarraga)
+
+---
+
+⭐ **Si te gusta este proyecto, dale una estrella en GitHub!**
+
+*Proyecto desarrollado como parte del taller de autenticación JWT con NestJS*
