@@ -5,6 +5,12 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
+  // Habilitar CORS para el frontend
+  app.enableCors({
+    origin: 'http://localhost:5173',  // URL del frontend (Vite)
+    credentials: true,
+  });
+  
   // Habilitar validación automática de DTOs
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true,  // Elimina propiedades no definidas en el DTO
